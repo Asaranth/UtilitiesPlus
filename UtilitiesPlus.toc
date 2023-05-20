@@ -1,0 +1,6 @@
+## Interface: 100100
+## Title: UtilitiesPlus
+## Author: Asaranth
+## Version: 1.0
+
+Waypoint.lua

@@ -11,7 +11,7 @@ To install UtilitiesPlus, follow these steps:
 6. Paste the "UtilitiesPlus" folder into the "AddOns" folder.
 
 ## Usage
-Once UtilitiesPlus is installed, you can start using its utility commands, including the /way command. The /way command allows you to create a pin at the provided coordinates on the map.
+Once UtilitiesPlus is installed, you can start using its utility commands.
 
 ### '/way' Command
 The /way command is used to create a pin at specific coordinates on the map. Here's how you can use it:

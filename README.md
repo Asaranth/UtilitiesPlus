@@ -22,3 +22,11 @@ X and Y represent the coordinates where you want to place the pin. These values 
 
 Example:
 - way 42 53 - Creates a pin at coordinates (42, 53) on the map.
+- way clear - Clears the current pin.
+
+
+### '/clearbars' Command
+The /clearbars command is used to remove all abilities and items from your action bars. Here's how you can use it:
+```
+/clearbars
+```

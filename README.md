@@ -12,12 +12,13 @@ To install UtilitiesPlus, follow these steps:
 
 ## Usage
 Once UtilitiesPlus is installed, you can start using its utility commands, including the /way command. The /way command allows you to create a pin at the provided coordinates on the map.
+
 ### '/way' Command
 The /way command is used to create a pin at specific coordinates on the map. Here's how you can use it:
-
 ```
 /way X Y
 ```
 X and Y represent the coordinates where you want to place the pin. These values should be in the format of a numerical value representing the position on the map.
+
 Example:
 - way 42 53 - Creates a pin at coordinates (42, 53) on the map.

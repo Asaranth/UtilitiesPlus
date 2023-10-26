@@ -1,6 +1,6 @@
 SLASH_ClearActionBars1 = '/clearbars'
 
-StaticPopupDialogs['CONFIRM_CLEAR_BARS'] = {
+StaticPopupDialogs['CONFIRM_CLEAR_ALL_BARS'] = {
   text = 'Do you want to clear all action bars?\nType "CONFIRM" into the field to confirm.',
   button1 = 'Yes',
   button2 = 'No',
@@ -29,5 +29,5 @@ StaticPopupDialogs['CONFIRM_CLEAR_BARS'] = {
 }
 
 function SlashCmdList.ClearActionBars()
-  StaticPopup_Show('CONFIRM_CLEAR_BARS')
+  StaticPopup_Show('CONFIRM_CLEAR_ALL_BARS')
 end

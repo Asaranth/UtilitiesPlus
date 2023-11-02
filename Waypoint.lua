@@ -3,14 +3,14 @@ SLASH_Waypoint1 = '/way'
 function Waypoint_HelpText()
   print('------ UtilitiesPlus - Waypoint Help ------')
   print('Command requires 2 numbers between 0 - 100')
-  print('For example: /way 25 30')
+  print('For example: /way 36.6 71.6')
   print('To remove existing waypoint use: /way clear')
   print('-------------------------------------------')
 end
 
 function SplitStr(str)
   local tbl = {}
-  for x in str:gmatch('%d+') do
+  for x in str:gmatch('%S+') do
     table.insert(tbl, x)
   end
   return tbl
@@ -21,7 +21,7 @@ function Waypoint_Set(cords)
     local location = C_Map.GetBestMapForUnit('player')
     C_Map.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(location, cords[1], cords[2]))
     local link = C_Map.GetUserWaypointHyperlink()
-    print(string.format('Waypoint created at (x: %d, y: %d) : ', (cords[1] * 100), (cords[2] * 100)) .. link)
+    print(string.format('Waypoint created at (x: %.1f, y: %.1f) : ', (cords[1] * 100), (cords[2] * 100)) .. link)
     C_SuperTrack.SetSuperTrackedUserWaypoint(true)
   else
     Waypoint_HelpText()
@@ -37,13 +37,9 @@ function SlashCmdList.Waypoint(msg)
     local options = {}
     local terms = SplitStr(msg)
     for _, value in pairs(terms) do
-      value = value:gsub('%.', ''):gsub('%,', ''):match('^(%d+)$')
+      value = value:gsub('%,', ''):match('%d+%.?%d*')
       if value then
-        if value:find('%.') or value:find('%,') then
-          value = (value / (10 ^ value:len()))
-        else
-          value = (value / (10 ^ 2))
-        end
+        value = value / 100
         table.insert(options, value)
       end
     end

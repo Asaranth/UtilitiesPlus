@@ -1,0 +1,5 @@
+package-as: UtilitiesPlus
+
+ignore:
+  - README.md
+  - .gitignore

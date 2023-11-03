@@ -1,5 +1,5 @@
 # UtilitiesPlus Addon
-UtilitiesPlus is a lightweight World of Warcraft addon that enhances your gaming experience by providing various utility commands. This addon aims to simplify common tasks and improve gameplay efficiency.
+UtilitiesPlus is a lightweight World of Warcraft addon that provides quick commands to execute simple tasks.
 
 ## '/way' Command
 The /way command is used to create a pin at specific coordinates on the map. Here's how you can use it:

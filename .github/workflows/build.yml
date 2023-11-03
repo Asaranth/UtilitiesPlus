@@ -9,9 +9,19 @@ on:
       - "!**-alpha**"
       - "!**-beta**"
 
+env:
+  CF_API_KEY: ${{ secrets.CF_API_KEY }}
+  WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+  WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+  GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: BigWigsMods/packager@v2
+      - name: Clone Project
+        uses: actions/checkout@v3
+        
+      - name: Package and Release
+        uses: BigWigsMods/packager@v2

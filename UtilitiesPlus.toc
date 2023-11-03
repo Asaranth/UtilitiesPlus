@@ -2,6 +2,8 @@
 ## Title: UtilitiesPlus
 ## Author: Asaranth
 ## Version: 1.0
+## X-Curse-Project-ID: 932306
+## X-Wago-ID: bGoM5B60
 
 Waypoint.lua
 ClearActionBars.lua

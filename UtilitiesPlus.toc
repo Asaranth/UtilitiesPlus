@@ -1,5 +1,6 @@
-## Interface: 100100
+## Interface: 110002
 ## Title: UtilitiesPlus
+## Notes: Adds some QOL features
 ## Author: Asaranth
 ## Version: 1.0
 ## X-Curse-Project-ID: 932306
@@ -7,3 +8,4 @@
 
 Waypoint.lua
 ClearActionBars.lua
+DisableAutoAddSpells.lua

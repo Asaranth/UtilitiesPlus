@@ -18,16 +18,6 @@ UtilitiesPlus is a lightweight Quality of Life addon for World of Warcraft desig
 4. **Increased Equipment Set Limit**
     - Extends the equipment set limit from the default of 8 to a robust 100 sets.
 
-## Installation
-
-To install UtilitiesPlus, follow these steps:
-1. Download the latest version of the addon from the [UtilitiesPlus GitHub repository](#).
-2. Extract the downloaded ZIP file.
-3. Copy the extracted "UtilitiesPlus" folder.
-4. Open your World of Warcraft installation directory.
-5. Navigate to the "Interface" folder, and then to the "AddOns" subfolder.
-6. Paste the "UtilitiesPlus" folder into the "AddOns" folder.
-
 ## Usage
 
 Once UtilitiesPlus is installed, you can start using its utility commands. Below is a list of commands:

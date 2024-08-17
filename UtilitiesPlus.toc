@@ -3,7 +3,6 @@
 ## Notes: Adds some QOL features
 ## Author: Asaranth
 ## Version: 1.1.0
-## DefaultState: Enabled
 ## Dependencies: Ace3
 ## SavedVariables: UtilitiesPlusDB
 

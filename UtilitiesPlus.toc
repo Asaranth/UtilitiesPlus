@@ -2,10 +2,13 @@
 ## Title: UtilitiesPlus
 ## Notes: Adds some QOL features
 ## Author: Asaranth
-## Version: 1.0.1
-## X-Curse-Project-ID: 932306
-## X-Wago-ID: bGoM5B60
+## Version: 1.1.0
+## DefaultState: Enabled
+## Dependencies: Ace3
+## SavedVariables: UtilitiesPlusDB
 
-Waypoint.lua
+embeds.xml
+
+Core.lua
+Waypoints.lua
 ClearActionBars.lua
-DisableAutoAddSpells.lua

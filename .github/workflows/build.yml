@@ -16,7 +16,7 @@ jobs:
       - name: Clone Project
         uses: actions/checkout@v1
       - name: Package and Release
-        uses: BigWigsMods/packager@master
+        uses: BigWigsMods/packager@v2
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
           WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}

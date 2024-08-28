@@ -3,7 +3,7 @@
 ## Notes: Adds some QOL features
 ## Author: Asaranth
 ## Version: 2.0.0
-## Dependencies: Ace3
+## OptionalDeps: Ace3
 ## SavedVariables: UtilitiesPlusDB
 
 embeds.xml

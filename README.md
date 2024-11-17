@@ -1,4 +1,4 @@
-# UtilitiesPlus Addon
+# UtilitiesPlus Addon 
 
 UtilitiesPlus is a lightweight Quality of Life addon for World of Warcraft designed to enhance your gaming experience. It provides various utility commands aimed at simplifying common tasks and boosting gameplay efficiency.
 

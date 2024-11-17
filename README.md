@@ -1,4 +1,4 @@
-# UtilitiesPlus Addon
+# UtilitiesPlus Addon 
 
 UtilitiesPlus is a lightweight Quality of Life addon for World of Warcraft designed to enhance your gaming experience. It provides various utility commands aimed at simplifying common tasks and boosting gameplay efficiency.
 
@@ -41,3 +41,6 @@ Clears all waypoints from the queue as well as the active waypoint.
 
 ### `/clearbars` Command
 Clears all spells and items from your action bars.
+
+### `/clearquests` Command
+Clears all quests in the quest log.

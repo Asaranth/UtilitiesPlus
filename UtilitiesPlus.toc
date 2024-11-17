@@ -1,8 +1,8 @@
-## Interface: 110002
+## Interface: 110005
 ## Title: UtilitiesPlus
 ## Notes: Adds some QOL features
 ## Author: Asaranth
-## Version: 2.0.0
+## Version: 2.1.0
 ## OptionalDeps: Ace3
 ## SavedVariables: UtilitiesPlusDB
 
@@ -11,3 +11,4 @@ embeds.xml
 Core.lua
 Waypoints.lua
 ClearActionBars.lua
+ClearQuests.lua

@@ -41,3 +41,6 @@ Clears all waypoints from the queue as well as the active waypoint.
 
 ### `/clearbars` Command
 Clears all spells and items from your action bars.
+
+### `/clearquests` Command
+Clears all quests in the quest log.

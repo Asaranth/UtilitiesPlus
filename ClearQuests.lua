@@ -1,7 +1,7 @@
-local ClearQuests = UtilitiesPlus:NewModule("ClearQuests", "AceConsole-3.0")
+local ClearQuests = UtilitiesPlus:NewModule('ClearQuests', 'AceConsole-3.0')
 
-StaticPopupDialog['CONFIRM_CLEAR_ALL_QUESTS'] = {
-    text = 'Do you want to clear all quests?\nType "CONFIRM" into the field to confirm.',
+StaticPopupDialogs['CONFIRM_CLEAR_ALL_QUESTS'] = {
+    text = "Do you want to clear all quests?\nType 'CONFIRM' into the field to confirm.",
     button1 = 'Yes',
     button2 = 'No',
     OnShow = function(self)
@@ -29,7 +29,7 @@ StaticPopupDialog['CONFIRM_CLEAR_ALL_QUESTS'] = {
 }
 
 function ClearQuests:OnInitialize()
-    self:RegisterChatCommand("clearquests", "ClearQuests")
+    self:RegisterChatCommand('clearquests', 'ClearQuests')
 end
 
 function clearQuests:ClearQuests()

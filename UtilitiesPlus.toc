@@ -2,7 +2,7 @@
 ## Title: UtilitiesPlus
 ## Notes: Adds some QOL features
 ## Author: Asaranth
-## Version: 2.1.0
+## Version: 2.1.2
 ## OptionalDeps: Ace3
 ## SavedVariables: UtilitiesPlusDB
 

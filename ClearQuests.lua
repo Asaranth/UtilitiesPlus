@@ -32,6 +32,6 @@ function ClearQuests:OnInitialize()
     self:RegisterChatCommand('clearquests', 'ClearQuests')
 end
 
-function clearQuests:ClearQuests()
+function ClearQuests:ClearQuests()
     StaticPopup_Show('CONFIRM_CLEAR_ALL_QUESTS')
 end

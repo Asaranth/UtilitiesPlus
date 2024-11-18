@@ -85,6 +85,8 @@ function UtilitiesPlus:PrintHelp()
         {command = "/way clear", description = "Clears the current waypoint."},
         {command = "/way clear all", description = "Clears all waypoints."},
         {command = "/way x y", description = "Sets a waypoint at the specified coordinates or adds it to the queue if another waypoint is active (e.g. /way 45.3 67.8)."},
+        {command = "/clearbars", description = "Clears all spells and items from your action bars."},
+        {command = "/clearquests", description = "Clears all quests in the quest log."}
     }
     self:Print("Available commands:")
     for _, cmd in ipairs(commands) do

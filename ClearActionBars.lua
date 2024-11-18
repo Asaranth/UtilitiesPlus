@@ -1,7 +1,7 @@
-local ClearActionBars = UtilitiesPlus:NewModule("ClearActionBars", "AceConsole-3.0")
+local ClearActionBars = UtilitiesPlus:NewModule('ClearActionBars', 'AceConsole-3.0')
 
 StaticPopupDialogs['CONFIRM_CLEAR_ALL_BARS'] = {
-    text = 'Do you want to clear all action bars?\nType "CONFIRM" into the field to confirm.',
+    text = "Do you want to clear all action bars?\nType 'CONFIRM' into the field to confirm.",
     button1 = 'Yes',
     button2 = 'No',
     OnShow = function(self)
@@ -29,7 +29,7 @@ StaticPopupDialogs['CONFIRM_CLEAR_ALL_BARS'] = {
 }
 
 function ClearActionBars:OnInitialize()
-    self:RegisterChatCommand("clearbars", "ClearActionBars")
+    self:RegisterChatCommand('clearbars', 'ClearActionBars')
 end
 
 function ClearActionBars:ClearActionBars()

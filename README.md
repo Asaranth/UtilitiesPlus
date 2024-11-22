@@ -1,22 +1,25 @@
-# UtilitiesPlus Addon 
+# UtilitiesPlus Addon
 
 UtilitiesPlus is a lightweight Quality of Life addon for World of Warcraft designed to enhance your gaming experience. It provides various utility commands aimed at simplifying common tasks and boosting gameplay efficiency.
 
 ## Features
 
 1. **Waypoints using Blizzard's Pin System**
-    - Utilize the `/way` command to create map pins at specific coordinates.
-    - Supports waypoint queues and automatic removal of pins upon reaching them.
-    - Configurable message displayed when a waypoint is reached.
+   - Utilize the `/way` command to create map pins at specific coordinates.
+   - Supports waypoint queues and automatic removal of pins upon reaching them.
+   - Configurable message displayed when a waypoint is reached.
 
 2. **Clear Action Bars Command**
-    - Use the `/clearbars` command to quickly wipe your action bars clean, allowing for easy reassignment of spells and items.
+   - Use the `/clearbars` command to quickly wipe your action bars clean, allowing for easy reassignment of spells and items.
 
-3. **Prevent Automatic Adding of Spells**
-    - An option to prevent spells from being automatically added to your action bars.
+3. **Clear Quests Command**
+   - Use the `/clearquests` command to remove all quests from your quest log.
 
-4. **Increased Equipment Set Limit**
-    - Extends the equipment set limit from the default of 8 to a robust 100 sets.
+4. **Prevent Automatic Adding of Spells**
+   - An option to prevent spells from being automatically added to your action bars.
+
+5. **Increased Equipment Set Limit**
+   - Extends the equipment set limit from the default of 8 to a robust 100 sets.
 
 ## Usage
 
@@ -29,9 +32,17 @@ Opens the configuration options for UtilitiesPlus.
 Lists all available commands.
 
 ### `/way` Command
-Create a waypoint at the specified coordinates or add one to the queue if a waypoint is already active. The coordinates `x` and `y` are numbers that range from 0 to 100 and can include a decimal place.
+Create a waypoint at the specified coordinates or add one to the queue if a waypoint is already active. The coordinates `x` and `y` are numbers that range from 0 to 100 and can include a decimal place. The map ID can optionally be provided prefixed with a `#` character.
 
-Example: `/way 36.6, 71.6`
+Examples:
+- `/way 36.6, 71.6`
+- `/way 36.6 71.6`
+- `/way 36.6 71.6`
+- `/way 36 71`
+- `/way #1 25, 25`
+- `/way #1 25 25`
+- `/way #1 25.0, 25.0`
+- `/way #1 25.0 25.0`
 
 ### `/way clear` Command
 Clears the current active waypoint.

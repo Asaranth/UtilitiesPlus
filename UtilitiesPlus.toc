@@ -5,7 +5,7 @@
 ## Version: 2.2.1
 ## OptionalDeps: Ace3
 ## SavedVariables: UtilitiesPlusDB
-## X-Curse-Projec-ID: 932306
+## X-Curse-Project-ID: 932306
 ## X-Wago-ID: bGoM5B60
 
 embeds.xml

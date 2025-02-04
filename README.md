@@ -7,7 +7,6 @@ UtilitiesPlus is a lightweight Quality of Life addon for World of Warcraft desig
 1. **Waypoints using Blizzard's Pin System**
    - Utilize the `/way` command to create map pins at specific coordinates.
    - Supports waypoint queues and automatic removal of pins upon reaching them.
-   - Configurable message displayed when a waypoint is reached.
 
 2. **Clear Action Bars Command**
    - Use the `/clearbars` command to quickly wipe your action bars clean, allowing for easy reassignment of spells and items.

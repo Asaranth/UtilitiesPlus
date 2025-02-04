@@ -22,25 +22,6 @@ local options = {
                     get = function()
                         return UtilitiesPlus.db.global.DisableAutoAddSpells
                     end,
-                }
-            }
-        },
-        waypoints = {
-            type = 'group',
-            name = 'Waypoints',
-            args = {
-                WaypointReachedMessage = {
-                    type = 'input',
-                    name = 'Waypoint Reached Message',
-                    desc = 'Custom message to display when reaching a waypoint.',
-                    order = 1,
-                    width = 'full',
-                    set = function(_, val)
-                        UtilitiesPlus.db.global.WaypointReachedMessage = val
-                    end,
-                    get = function()
-                        return UtilitiesPlus.db.global.WaypointReachedMessage
-                    end
                 },
                 AutoRemoveWaypoints = {
                     type = 'toggle',
@@ -54,20 +35,6 @@ local options = {
                     get = function()
                         return UtilitiesPlus.db.global.AutoRemoveWaypoints
                     end
-                },
-                MessageDisplayType = {
-                    type = 'select',
-                    name = 'Waypoint Reached Message Display Type',
-                    desc = 'Choose whether the Waypoint Reached message is displayed in the chat or as a raid warning.',
-                    order = 3,
-                    width = 'full',
-                    values = { ['chat'] = 'Chat', ['warning'] = 'Raid Warning' },
-                    set = function(_, val)
-                        UtilitiesPlus.db.global.MessageDisplayType = val
-                    end,
-                    get = function()
-                        return UtilitiesPlus.db.global.MessageDisplayType
-                    end
                 }
             }
         }
@@ -78,9 +45,7 @@ function UtilitiesPlus:OnInitialize()
     self.db = LibStub('AceDB-3.0'):New('UtilitiesPlusDB', {
         global = {
             DisableAutoAddSpells = true,
-            AutoRemoveWaypoints = true,
-            WaypointReachedMessage = 'Waypoint reached.',
-            MessageDisplayType = 'chat'
+            AutoRemoveWaypoints = true
         },
     }, true)
 

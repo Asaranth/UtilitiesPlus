@@ -3,29 +3,9 @@ local Waypoint = UtilitiesPlus:NewModule('Waypoint', 'AceConsole-3.0', 'AceEvent
 local waypointQueue = {}
 local activeWaypoint
 
-local function showPopupMessage(msg)
-    local frame = RaidWarningFrame
-    frame.messageTime = 2
-
-    local function removeMessage()
-        frame:SetScript("OnUpdate", nil)
-        frame.slot1:SetText("")
-        frame.slot2:SetText("")
-    end
-
-    frame:SetScript("OnUpdate", function(_, elapsed)
-        frame.messageTime = frame.messageTime - elapsed
-        if frame.messageTime <= 0 then
-            removeMessage()
-        end
-    end)
-
-    RaidNotice_AddMessage(frame, msg, ChatTypeInfo['RAID_WARNING'])
-end
-
 function Waypoint:OnInitialize()
     self:RegisterChatCommand('way', 'HandleWaypointCommands')
-    self:RegisterEvent('PLAYER_STOPPED_MOVING', 'OnPlayerStoppedMoving')
+    self:RegisterEvent('NAVIGATION_DESTINATION_REACHED', 'OnNavigationDestinationReached')
 end
 
 function Waypoint:HandleWaypointCommands(input)
@@ -80,36 +60,17 @@ function Waypoint:HandleWaypointCommands(input)
     end
 end
 
-function Waypoint:OnPlayerStoppedMoving()
-    if not C_SuperTrack.IsSuperTrackingUserWaypoint() then
-        return
-    end
-    local location = C_Map.GetBestMapForUnit('player')
-    local playerPosition = C_Map.GetPlayerMapPosition(location, 'player')
-    local waypoint = C_Map.GetUserWaypoint()
-    local meX, meY = playerPosition:GetXY()
-    local wayX, wayY = C_Map.GetUserWaypointPositionForMap(waypoint.uiMapID):GetXY()
-    local diffX = math.abs(meX - wayX)
-    local diffY = math.abs(meY - wayY)
-
-    if diffX <= 0.009 and diffY <= 0.009 then
-        local message = UtilitiesPlus.db.global.WaypointReachedMessage
-        if UtilitiesPlus.db.global.MessageDisplayType == 'warning' then
-            showPopupMessage(message)
-        else
-            UtilitiesPlus:Print(message)
-        end
-
-        if #waypointQueue > 0 then
-            self:SetWaypoint(table.remove(waypointQueue, 1))
-        else
-            if UtilitiesPlus.db.global.AutoRemoveWaypoints then
-                self:ClearWaypoint()
-                activeWaypoint = nil
-            end
+function Waypoint:OnNavigationDestinationReached()
+    if #waypointQueue > 0 then
+        self:SetWaypoint(table.remove(waypointQueue, 1))
+    else
+        if UtilitiesPlus.db.global.AutoRemoveWaypoints then
+            self:ClearWaypoint()
+            activeWaypoint = nil
         end
     end
 end
+
 
 function Waypoint:SetWaypoint(coords)
     local mapID = coords[1]

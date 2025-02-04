@@ -1,8 +1,8 @@
-## Interface: 110005
+## Interface: 110007
 ## Title: UtilitiesPlus
 ## Notes: Adds some QOL features
 ## Author: Asaranth
-## Version: 2.2.0
+## Version: 2.2.1
 ## OptionalDeps: Ace3
 ## SavedVariables: UtilitiesPlusDB
 

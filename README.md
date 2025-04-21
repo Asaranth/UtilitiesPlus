@@ -1,6 +1,6 @@
 # UtilitiesPlus Addon
 
-UtilitiesPlus is a lightweight Quality of Life addon for World of Warcraft designed to enhance your gaming experience. It provides various utility commands aimed at simplifying common tasks and boosting gameplay efficiency.
+**UtilitiesPlus** is a lightweight Quality of Life addon for *World of Warcraft* designed to enhance your gaming experience. It provides various utility commands aimed at simplifying common tasks and boosting gameplay efficiency.
 
 ## Features
 
@@ -20,6 +20,18 @@ UtilitiesPlus is a lightweight Quality of Life addon for World of Warcraft desig
 5. **Increased Equipment Set Limit**
    - Extends the equipment set limit from the default of 8 to a robust 100 sets.
 
+6. **Minimap Socials Display** ✅ **(New!)**
+   - Adds customizable text displays near the minimap showing the number of **Guild** and **Friends** (WoW + Battle.net) online.
+   - Hovering over the display shows detailed tooltips:
+     - **Guild**: Shows character names (without realm) and their zones, color-coded by class.
+     - **Friends**: Shows **currently logged in characters** from WoW friends and Battle.net (WoW only), also with class-colored names and zones.
+   - Click behavior:
+     - Left-click: Opens a whisper to the selected name.
+     - Right-click: Sends a party invite.
+   - Fully configurable in font, size, alignment, color, and positioning.
+
+---
+
 ## Usage
 
 Once UtilitiesPlus is installed, you can start using its utility commands. Below is a list of commands:
@@ -36,11 +48,9 @@ Create a waypoint at the specified coordinates or add one to the queue if a wayp
 Examples:
 - `/way 36.6, 71.6`
 - `/way 36.6 71.6`
-- `/way 36.6 71.6`
 - `/way 36 71`
 - `/way #1 25, 25`
 - `/way #1 25 25`
-- `/way #1 25.0, 25.0`
 - `/way #1 25.0 25.0`
 
 ### `/way clear` Command

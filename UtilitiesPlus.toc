@@ -14,3 +14,4 @@ Core.lua
 Waypoints.lua
 ClearActionBars.lua
 ClearQuests.lua
+MinimapSocials.lua

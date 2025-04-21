@@ -18,7 +18,7 @@ local function GetClassColor(class)
 end
 
 local function CalculateTextWidthForFont(text, size)
-    return string.len(text) * size * 0.8
+    return string.len(text) * size * 0.6
 end
 
 local function AddTooltipLinesForGuild()
@@ -186,7 +186,7 @@ function MinimapSocials:UpdateTexts()
     UpdateFontSettings()
     UpdateTextValues()
     guildText:SetSize(CalculateTextWidthForFont('### Guild', size), size)
-    friendsText:SetSize(CalculateTextWidthForFont('## Friends', size), size)
+    friendsText:SetSize(CalculateTextWidthForFont('### Friends', size), size)
     guildText.text:SetJustifyH(db.guildAlign or DEFAULT_ALIGN)
     friendsText.text:SetJustifyH(db.friendsAlign or DEFAULT_ALIGN)
 end

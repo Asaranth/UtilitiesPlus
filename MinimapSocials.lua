@@ -60,7 +60,7 @@ end
 local function CreateSocialText(name, type)
     local db = UtilitiesPlus.db.global.MinimapSocials or {}
     local frame = CreateFrame('Frame', name, Minimap)
-    frame.text = frame:CreateFontString(nil, 'OVERLAY').
+    frame.text = frame:CreateFontString(nil, 'OVERLAY')
     frame.type = type
     frame:EnableMouse(true)
     frame:SetMouseClickEnabled(true)

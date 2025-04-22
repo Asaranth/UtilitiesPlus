@@ -10,6 +10,7 @@
 
 embeds.xml
 
+Settings.lua
 Core.lua
 Waypoints.lua
 ClearActionBars.lua

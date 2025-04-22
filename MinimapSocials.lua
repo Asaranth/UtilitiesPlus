@@ -202,8 +202,10 @@ function MinimapSocials:Enable(init)
         self:RegisterEvent('PLAYER_GUILD_UPDATE', 'UpdateTexts')
         self:RegisterEvent('GROUP_ROSTER_UPDATE', 'UpdateTexts')
 
-        C_FriendList.ShowFriends()
-        self:UpdateTexts()
+        C_Timer.After(1, function()
+            C_FriendList.ShowFriends()
+            self:UpdateTexts()
+        end)
 
         self._enabled = true
         if not init then UtilitiesPlus:Print('MinimapSocials module |cff00ff00enabled|r.') end

@@ -28,8 +28,20 @@ StaticPopupDialogs['CONFIRM_CLEAR_ALL_QUESTS'] = {
     preferredIndex = 3
 }
 
-function ClearQuests:OnInitialize()
-    self:RegisterChatCommand('clearquests', 'ClearQuests')
+function ClearQuests:Enable(init)
+    if not self._enabled then
+        self:RegisterChatCommand('clearquests', 'ClearQuests')
+        self._enabled = true
+        if not init then UtilitiesPlus:Print('ClearQuests module |cff00ff00enabled|r.') end
+    end
+end
+
+function ClearQuests:Disable()
+    if self._enabled then
+        self:UnregisterChatCommand('clearquests')
+        self._enabled = false
+        UtilitiesPlus:Print('ClearQuests module |cffff0000disabled|r.')
+    end
 end
 
 function ClearQuests:ClearQuests()

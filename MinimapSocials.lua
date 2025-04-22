@@ -59,8 +59,8 @@ end
 
 local function CreateSocialText(name, type)
     local db = UtilitiesPlus.db.global.MinimapSocials or {}
-    local frame = CreateFrame('Frame', name, UIParent)
-    frame.text = frame:CreateFontString(nil, 'OVERLAY')
+    local frame = CreateFrame('Frame', name, Minimap)
+    frame.text = frame:CreateFontString(nil, 'OVERLAY').
     frame.type = type
     frame:EnableMouse(true)
     frame:SetMouseClickEnabled(true)
@@ -191,18 +191,46 @@ function MinimapSocials:UpdateTexts()
     friendsText.text:SetJustifyH(db.friendsAlign or DEFAULT_ALIGN)
 end
 
-function MinimapSocials:OnEnable()
-    guildText = CreateSocialText('GuildTextFrame', TYPE_GUILD)
-    friendsText = CreateSocialText('FriendsTextFrame', TYPE_FRIEND)
+function MinimapSocials:Enable(init)
+    if not self._enabled then
+        guildText = CreateSocialText('GuildTextFrame', TYPE_GUILD)
+        friendsText = CreateSocialText('FriendsTextFrame', TYPE_FRIEND)
 
-    self:RegisterEvent('PLAYER_ENTERING_WORLD', 'UpdateTexts')
-    self:RegisterEvent('FRIENDLIST_UPDATE', 'UpdateTexts')
-    self:RegisterEvent('GUILD_ROSTER_UPDATE', 'UpdateTexts')
-    self:RegisterEvent('PLAYER_GUILD_UPDATE', 'UpdateTexts')
-    self:RegisterEvent('GROUP_ROSTER_UPDATE', 'UpdateTexts')
+        self:RegisterEvent('PLAYER_ENTERING_WORLD', 'UpdateTexts')
+        self:RegisterEvent('FRIENDLIST_UPDATE', 'UpdateTexts')
+        self:RegisterEvent('GUILD_ROSTER_UPDATE', 'UpdateTexts')
+        self:RegisterEvent('PLAYER_GUILD_UPDATE', 'UpdateTexts')
+        self:RegisterEvent('GROUP_ROSTER_UPDATE', 'UpdateTexts')
 
-    C_Timer.After(1, function()
         C_FriendList.ShowFriends()
         self:UpdateTexts()
-    end)
+
+        self._enabled = true
+        if not init then UtilitiesPlus:Print('MinimapSocials module |cff00ff00enabled|r.') end
+    end
+end
+
+function MinimapSocials:Disable()
+    if self._enabled then
+        if self._enabled then
+            self:UnregisterEvent('PLAYER_ENTERING_WORLD')
+            self:UnregisterEvent('FRIENDLIST_UPDATE')
+            self:UnregisterEvent('GUILD_ROSTER_UPDATE')
+            self:UnregisterEvent('PLAYER_GUILD_UPDATE')
+            self:UnregisterEvent('GROUP_ROSTER_UPDATE')
+
+            if guildText then
+                guildText:Hide()
+                guildText = nil
+            end
+
+            if friendsText then
+                friendsText:Hide()
+                friendsText = nil
+            end
+
+            self._enabled = false
+            UtilitiesPlus:Print('MinimapSocials module |cffff0000disabled|r.')
+        end
+    end
 end

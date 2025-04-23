@@ -64,6 +64,7 @@ local function CreateSocialText(name, type)
     frame.type = type
     frame:EnableMouse(true)
     frame:SetMouseClickEnabled(true)
+    frame:SetFrameStrata('MEDIUM')
 
     frame:SetScript('OnEnter', function(self)
         GameTooltip:SetOwner(self, 'ANCHOR_BOTTOM')

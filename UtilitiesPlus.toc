@@ -1,8 +1,8 @@
-## Interface: 110100
+## Interface: 110105
 ## Title: UtilitiesPlus
 ## Notes: Adds some QOL features
 ## Author: Asaranth
-## Version: 2.2.1
+## Version: 2.2.7
 ## OptionalDeps: Ace3
 ## SavedVariables: UtilitiesPlusDB
 ## X-Curse-Project-ID: 932306

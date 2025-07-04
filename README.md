@@ -1,4 +1,4 @@
-![CurseForge Downloads](https://img.shields.io/curseforge/dt/932306)
+![CurseForge Downloads](https://img.shields.io/curseforge/dt/932306) ![CurseForge Game Versions](https://img.shields.io/curseforge/game-versions/932306)
 
 # UtilitiesPlus Addon
 

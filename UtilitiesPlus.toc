@@ -1,4 +1,4 @@
-## Interface: 110105
+## Interface: 110200
 ## Title: UtilitiesPlus
 ## Notes: Adds some QOL features
 ## Author: Asaranth

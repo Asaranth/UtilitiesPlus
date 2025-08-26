@@ -2,7 +2,7 @@
 ## Title: UtilitiesPlus
 ## Notes: Adds some QOL features
 ## Author: Asaranth
-## Version: 2.2.7
+## Version: 2.2.8
 ## OptionalDeps: Ace3
 ## SavedVariables: UtilitiesPlusDB
 ## X-Curse-Project-ID: 932306

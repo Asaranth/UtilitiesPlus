@@ -115,7 +115,7 @@ local function UpdateFontSettings()
     end
 end
 
-local function Apply(f, label, count, isValue, extraInfo)
+local function Apply(f, label, count, extraInfo)
     if not f or not f.text then return end
 
     local db = UtilitiesPlus.db.global.MinimapSocials or {}
@@ -124,18 +124,23 @@ local function Apply(f, label, count, isValue, extraInfo)
     local outline = db.outline or 'NONE'
 
     local function GetClassColorOrDefault(isValue)
-        if isValue and db.valueColorOverride then
-            local _, class = UnitClass('player')
-            return GetClassColor(class)
-        elseif not isValue and db.labelColorOverride then
-            local _, class = UnitClass('player')
-            return GetClassColor(class)
+        local _, class = UnitClass('player')
+        if isValue then
+            if db.valueColorOverride then
+                return GetClassColor(class)
+            else
+                return db.valueColor.r or 1, db.valueColor.g or 1, db.valueColor.b or 1
+            end
         else
-            return db.valueColor.r or 1, db.valueColor.g or 1, db.valueColor.b or 1
+            if db.labelColorOverride then
+                return GetClassColor(class)
+            else
+                return db.labelColor.r or 1, db.labelColor.g or 1, db.labelColor.b or 1
+            end
         end
     end
 
-    local colorValR, colorValG, colorValB = GetClassColorOrDefault(isValue)
+    local colorValR, colorValG, colorValB = GetClassColorOrDefault(true)
     local lblColorR, lblColorG, lblColorB = GetClassColorOrDefault(false)
 
     local text = string.format('|cff%02x%02x%02x%d |cff%02x%02x%02x%s|r',
@@ -174,8 +179,8 @@ local function UpdateTextValues()
         end
     end
 
-    Apply(guildText, 'Guild', guildOnline, true)
-    Apply(friendsText, 'Friends', friendsOnline + battleNetInGame, true)
+    Apply(guildText, 'Guild', guildOnline)
+    Apply(friendsText, 'Friends', friendsOnline + battleNetInGame)
 
     guildText:SetPoint(DEFAULT_ALIGN, Minimap, DEFAULT_ALIGN, db.guildX or -30, db.guildY or 40)
     friendsText:SetPoint(DEFAULT_ALIGN, Minimap, DEFAULT_ALIGN, db.friendsX or 30, db.friendsY or 40)

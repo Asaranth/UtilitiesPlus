@@ -1,3 +1,5 @@
+![CurseForge Downloads](https://img.shields.io/curseforge/dt/932306) ![CurseForge Game Versions](https://img.shields.io/curseforge/game-versions/932306)
+
 # UtilitiesPlus Addon
 
 **UtilitiesPlus** is a lightweight Quality of Life addon for *World of Warcraft* designed to enhance your gaming experience. It provides various utility commands aimed at simplifying common tasks and boosting gameplay efficiency.
